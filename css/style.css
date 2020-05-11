@@ -2,13 +2,107 @@
 @import url(icon.css);
 @import url(owl.carousel.min.css);
 @import url(owl.theme.default.min.css);
+.fs-10 {
+  font-size: 10px; }
+
+.fs-11 {
+  font-size: 11px; }
+
+.fs-12 {
+  font-size: 12px; }
+
+.fs-13 {
+  font-size: 13px; }
+
+.fs-14 {
+  font-size: 14px; }
+
+.fs-15 {
+  font-size: 15px; }
+
+.fs-16 {
+  font-size: 16px; }
+
+.fs-17 {
+  font-size: 17px; }
+
+.fs-18 {
+  font-size: 18px; }
+
+.fs-19 {
+  font-size: 19px; }
+
+.fs-20 {
+  font-size: 20px; }
+
+.fs-21 {
+  font-size: 21px; }
+
+.fs-22 {
+  font-size: 22px; }
+
+.fs-23 {
+  font-size: 23px; }
+
+.fs-24 {
+  font-size: 24px; }
+
+.fs-25 {
+  font-size: 25px; }
+
+.fs-26 {
+  font-size: 26px; }
+
+.fs-27 {
+  font-size: 27px; }
+
+.fs-28 {
+  font-size: 28px; }
+
+.fs-29 {
+  font-size: 29px; }
+
+.fs-30 {
+  font-size: 30px; }
+
+.fs-31 {
+  font-size: 31px; }
+
+.fs-32 {
+  font-size: 32px; }
+
+.fs-33 {
+  font-size: 33px; }
+
+.fs-34 {
+  font-size: 34px; }
+
+.fs-35 {
+  font-size: 35px; }
+
+.fs-36 {
+  font-size: 36px; }
+
+.fs-37 {
+  font-size: 37px; }
+
+.fs-38 {
+  font-size: 38px; }
+
+.fs-39 {
+  font-size: 39px; }
+
 @font-face {
   font-family: conan;
   src: url(coconnextarabic-light.ttf); }
-.cuts-card, .products-card, .trademarks-link, .social-footer li a:hover {
-  -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
-  -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
-  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37); }
+.color-mainColor {
+  color: #30BFFF !important; }
+
+.color-darkColor {
+  color: #403B41 !important; }
+
+.color-lightBlueColor {
+  color: #80D8FF !important; }
 
 .cuts-card .cuts-card-content p, .products-card a.products-card-link {
   white-space: nowrap;
@@ -489,5 +583,96 @@ footer {
   color: white; }
   .main-btn:hover {
     background-color: #80D8FF; }
+
+.order-steps {
+  overflow: hidden; }
+  .order-steps .row .col-lg:not(:last-child) .order-step-img:before {
+    position: absolute;
+    right: -210%;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    height: 10px;
+    background-color: #403B41;
+    width: 225%;
+    z-index: -1; }
+    @media (max-width: 767.98px) {
+      .order-steps .row .col-lg:not(:last-child) .order-step-img:before {
+        width: 180%;
+        right: -177%; } }
+  .order-steps .order-step-container {
+    margin-bottom: 25px; }
+    .order-steps .order-step-container .order-step-img {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: #403B41;
+      border-radius: 50%;
+      position: relative; }
+      .order-steps .order-step-container .order-step-img img {
+        height: 40px;
+        width: auto; }
+    .order-steps .order-step-container h4 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 600; }
+    .order-steps .order-step-container p {
+      margin: 0;
+      font-size: 17px; }
+    .order-steps .order-step-container.active .order-step-img {
+      background-color: #30BFFF; }
+      .order-steps .order-step-container.active .order-step-img:before {
+        background-color: #30BFFF !important; }
+
+.my-breadcrumb {
+  padding: 0 25px; }
+  .my-breadcrumb ul {
+    display: flex;
+    align-items: center; }
+    .my-breadcrumb ul li {
+      display: flex;
+      color: #30BFFF; }
+      .my-breadcrumb ul li:first-child a {
+        color: #403B41;
+        display: flex;
+        align-items: flex-start; }
+        .my-breadcrumb ul li:first-child a img {
+          height: 18px;
+          margin-right: 5px; }
+      .my-breadcrumb ul li a:hover {
+        color: #30BFFF; }
+      .my-breadcrumb ul li i {
+        font-size: 11px;
+        margin-right: 3px;
+        color: #403B41;
+        display: flex;
+        align-items: center; }
+
+.navbar-light {
+  background-color: white !important; }
+
+.my-card {
+  padding: 10px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+
+.order-price {
+  font-size: 30px;
+  font-weight: 600; }
+
+.link-img img {
+  height: 20px;
+  width: auto;
+  margin-right: 3px; }
+
+.dark-link {
+  color: #403B41; }
+  .dark-link:hover {
+    color: #30BFFF; }
 
 /*# sourceMappingURL=style.css.map */

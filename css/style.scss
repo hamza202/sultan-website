@@ -10,10 +10,25 @@ $mainColor: #30BFFF;
 $lightBlueColor: #80D8FF;
 $darkColor: #403B41;
 $grayDark: #7A767A;
+@for $j from 10 to 40 {
+  .fs-#{$j} {
+    font-size: $j+px;
+  }
+}
 @font-face {
   font-family: conan;
   src: url(coconnextarabic-light.ttf);
 }
+.color-mainColor{
+   color: $mainColor !important;
+ }
+.color-darkColor{
+  color: $darkColor !important;
+}
+.color-lightBlueColor{
+  color: $lightBlueColor !important;
+}
+%my-sh
 %my-shadow{
   -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
   -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
@@ -674,5 +689,129 @@ footer{
   color: white;
   &:hover{
     background-color: $lightBlueColor;
+  }
+}
+.order-steps{
+  overflow: hidden;
+  .row{
+    .col-lg{
+      &:not(:last-child){
+        .order-step-img{
+          &:before{
+            position: absolute;
+            right: -210%;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            height: 10px;
+            background-color: $darkColor;
+            width: 225%;
+            z-index: -1;
+            @include media-breakpoint-down(sm){
+              width: 180%;
+              right: -177%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .order-step-container{
+    margin-bottom: 25px;
+    .order-step-img{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: $darkColor;
+      border-radius: 50%;
+      position: relative;
+      @extend %my-shadow;
+      img{
+        height: 40px;
+        width: auto;
+      }
+    }
+    h4{
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p{
+      margin: 0;
+      font-size: 17px;
+    }
+    &.active{
+      .order-step-img{
+        background-color: $mainColor;
+        &:before{
+          background-color: $mainColor !important;
+        }
+      }
+    }
+  }
+}
+.my-breadcrumb{
+  padding: 0 25px;
+  ul{
+    display: flex;
+    align-items: center;
+    li{
+      display: flex;
+      color: $mainColor;
+      &:first-child{
+        a{
+          color: $darkColor;
+          display: flex;
+          align-items: flex-start;
+          img{
+            height: 18px;
+            margin-right: 5px;
+          }
+        }
+      }
+      a{
+        &:hover{
+          color: $mainColor;
+        }
+      }
+      i{
+        font-size: 11px;
+        margin-right: 3px;
+        color: $darkColor;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.navbar-light{
+  background-color: white !important;
+  @extend %my-shadow;
+}
+.my-card{
+  padding: 10px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.order-price{
+  font-size: 30px;
+  font-weight: 600;
+}
+.link-img{
+  img{
+    height: 20px;
+    width: auto;
+    margin-right: 3px;
+  }
+}
+.dark-link{
+  color: $darkColor;
+  &:hover{
+    color: $mainColor;
   }
 }

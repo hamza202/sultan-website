@@ -1,0 +1,7 @@
+<svg id="print" xmlns="http://www.w3.org/2000/svg" width="39.52" height="39.52" viewBox="0 0 39.52 39.52">
+  <path id="Path_3918" data-name="Path 3918" d="M0,0H39.52V39.52H0Z" fill="none"/>
+  <path id="Path_3919" data-name="Path 3919" d="M8,5H24.194v6.785H8Z" transform="translate(4.599 1.884)" opacity="0.3"/>
+  <circle id="Ellipse_159" data-name="Ellipse 159" cx="1.129" cy="1.129" r="1.129" transform="translate(28.793 17.784)"/>
+  <path id="Path_3920" data-name="Path 3920" d="M31.753,12.1H30V3H9v9.1H7.25A5.35,5.35,0,0,0,2,17.553V28.468H9v7.277H30V28.468h7V17.553A5.35,5.35,0,0,0,31.753,12.1ZM12.5,6.638h14V12.1h-14Zm14,25.468h-14V24.83h14Zm7-7.277H30V21.192H9V24.83H5.5V17.553a1.791,1.791,0,0,1,1.75-1.819h24.5a1.791,1.791,0,0,1,1.75,1.819Z" transform="translate(0.258 0.387)"/>
+  <path id="Path_3921" data-name="Path 3921" d="M7.528,15.53H28.7v3.687h3.528V11.843A1.81,1.81,0,0,0,30.463,10H5.764A1.81,1.81,0,0,0,4,11.843v7.374H7.528ZM28.7,10.922a1.845,1.845,0,1,1-1.764,1.843A1.81,1.81,0,0,1,28.7,10.922Z" transform="translate(1.75 6.165)" opacity="0.3"/>
+</svg>
