@@ -163,6 +163,7 @@ a {
     background-color: transparent;
     display: flex;
     height: 100%;
+    align-items: center;
     width: 40px;
     justify-content: center;
     cursor: pointer;
@@ -468,7 +469,7 @@ a {
 
   img {
     width: 100%;
-    height: 380px;
+    height: 300px;
     object-fit: cover;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -1141,4 +1142,17 @@ footer {
   input:checked+label{
     border-color: $mainColor;
   }
+}
+#products_grid .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1{
+  height: 399px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.oe_product {
+  .card{
+    border: 0;
+  }
+}
+.cuts-card .cuts-card-content p{
+  font-size: 18px;
 }
