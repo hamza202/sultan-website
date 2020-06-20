@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    $('.delete-product-in-list').on('click', function () {
+        $(this).closest("li").fadeOut( "slow" );
+    });
+
+    $('.cart-drop-link, .close-drop').on('click', function (e) {
+        $('.cart-drop-container').toggleClass('active');
+        e.stopPropagation()
+    });
+    $('.cart-drop-container').on('click', function (e) {
+        e.stopImmediatePropagation();
+    });
+    $(window).on('click', function () {
+        $('.cart-drop-container').removeClass('active');
+    });
+
     if ($('.my-owl-carousel').length) {
         $('.my-owl-carousel').owlCarousel({
             loop: true,
@@ -105,7 +120,7 @@ $(document).ready(function () {
 
 
     if ($('.number-cunt').length) {
-        $(document).on('click', '.minus-btn, .plus-btn', function (e) {
+        $('.minus-btn, .plus-btn').on('click', function (e) {
             var $this = $(e.target),
                 input = $this.parent().parent().find('.number-cunt'),
                 v = $this.hasClass('minus-btn') ? input.val() - 1 : input.val() * 1 + 1,
@@ -118,7 +133,7 @@ $(document).ready(function () {
             }
             e.preventDefault();
         });
-        $(document).on('change', '.number-cunt', function (e) {
+        $('.number-cunt').on('change', function (e) {
             var input = $(e.target),
                 min = input.attr('data-min') ? input.attr('data-min') : 1,
                 max = input.attr('data-max'),
@@ -129,7 +144,4 @@ $(document).ready(function () {
     }
 
 
-    $('.delete-product-in-list').on('click', function () {
-        $(this).closest("li").fadeOut( "slow" );
-    })
 });
