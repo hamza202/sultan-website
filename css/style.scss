@@ -18,6 +18,10 @@ $grayDark: #7A767A;
   }
 }
 
+:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: conan;
   src: url(coconnextarabic-light.ttf);
@@ -35,15 +39,26 @@ $grayDark: #7A767A;
   color: $lightBlueColor !important;
 }
 
+%my-card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.19);
+}
+
 %my-shadow {
   -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
   -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.37);
 }
+
 %my-shadow2 {
   -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.30);
   -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.30);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.30);
+}
+%my-shadow3{
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.50);
 }
 %ellipsis {
   white-space: nowrap;
@@ -191,23 +206,24 @@ a {
     width: 29px;
   }
 
-  span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(1);
-    display: block;
-    width: 17px;
-    height: 17px;
-    background-color: $mainColor;
-    color: white;
-    text-align: center;
-    font-size: 13px;
-    border-radius: 50%;
-    transition: all ease-in-out 0.3s;
-  }
 
-  a {
+
+  a.cart-drop-link {
+    span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) scale(1);
+      display: block;
+      width: 17px;
+      height: 17px;
+      background-color: $mainColor;
+      color: white;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 50%;
+      transition: all ease-in-out 0.3s;
+    }
     &:hover {
       span {
         transform: translateX(-50%) scale(1.1);
@@ -297,8 +313,9 @@ a {
         color: $mainColor;
       }
     }
-    &.active{
-      a{
+
+    &.active {
+      a {
         background-color: $mainColor;
         color: white !important;
         border-top-right-radius: 15px;
@@ -511,8 +528,9 @@ a {
       @extend %ellipsis;
     }
   }
-  &:hover{
-    .add-card{
+
+  &:hover {
+    .add-card {
       right: 0;
     }
   }
@@ -935,6 +953,14 @@ footer {
   }
 }
 
+.blue-link {
+  color: $mainColor;
+
+  &:hover {
+    color: $darkColor;
+  }
+}
+
 .person-card-img-container {
   width: 50px;
   height: 50px;
@@ -1003,61 +1029,73 @@ footer {
   .cuts-card {
     max-width: 250px;
     margin: 0 auto 30px auto;
+
     img {
       height: 370px;
     }
   }
 }
-.page-link{
+
+.page-link {
   color: $mainColor;
-  &:hover{
+
+  &:hover {
     color: $darkColor;
   }
 }
-.page-item.active .page-link{
+
+.page-item.active .page-link {
   background-color: $mainColor;
   border-color: $mainColor;
   color: white;
 }
-.list-gallery-list{
-  li{
-    a{
+
+.list-gallery-list {
+  li {
+    a {
       color: $darkColor;
       font-size: 20px;
     }
-    &.active{
-      a{
+
+    &.active {
+      a {
         color: $mainColor;
       }
     }
   }
 }
+
 .dont-collapse-sm {
-  .card{
+  .card {
     border: 0;
   }
+
   @include media-breakpoint-up(lg) {
     display: block !important;
     height: auto !important;
     visibility: visible;
   }
 }
-.list-filler-link{
-  a{
+
+.list-filler-link {
+  a {
     color: $darkColor;
     font-size: 17px;
     text-transform: capitalize;
-    &:hover{
+
+    &:hover {
       color: $grayDark;
     }
   }
-  li.active{
-    a{
+
+  li.active {
+    a {
       color: $mainColor;
     }
   }
 }
-.filler-collapse-button{
+
+.filler-collapse-button {
   color: $darkColor;
   position: relative;
   padding-right: 30px;
@@ -1066,10 +1104,12 @@ footer {
   font-weight: 600;
   display: block;
   @extend %ellipsis;
-  &:hover{
+
+  &:hover {
     color: $mainColor;
   }
-  i{
+
+  i {
     position: absolute;
     right: 0;
     top: 50%;
@@ -1077,27 +1117,34 @@ footer {
     transition: all ease-in-out 0.3s;
     font-size: 14px;
   }
-  &.collapsed{
-    i{
+
+  &.collapsed {
+    i {
       transform: translateY(-50%) rotate(0deg);
     }
   }
 }
-.irs--flat .irs-bar,.irs--flat .irs-handle>i:first-child,.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+
+.irs--flat .irs-bar, .irs--flat .irs-handle > i:first-child, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
   background-color: $mainColor;
 }
-.irs--flat .irs-to:before,.irs--flat .irs-from:before,.irs--flat .irs-single:before{
-  border-top-color: $mainColor ;
+
+.irs--flat .irs-to:before, .irs--flat .irs-from:before, .irs--flat .irs-single:before {
+  border-top-color: $mainColor;
 }
-.irs--flat .irs-handle:hover>i:first-child{
+
+.irs--flat .irs-handle:hover > i:first-child {
   background-color: $mainColor;
 }
-.color-filter-list{
+
+.color-filter-list {
   margin-bottom: 0 !important;
-  input{
+
+  input {
     display: none;
   }
-  label{
+
+  label {
     display: block;
     background-color: white;
     border-radius: 5px;
@@ -1106,29 +1153,37 @@ footer {
     border: 1px solid $grayDark;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
-    &.red-color{
+
+    &.red-color {
       background-color: #B71414;
     }
-    &.dark-blue{
+
+    &.dark-blue {
       background-color: #00047A;
     }
-    &.black-color{
+
+    &.black-color {
       background-color: #000;
     }
-    &.gray-color{
+
+    &.gray-color {
       background-color: #7A7171;
     }
   }
-  input:checked+label{
-    @extend %my-shadow2;
+
+  input:checked + label {
+    @extend %my-shadow3;
   }
 }
-.size-filter-list{
+
+.size-filter-list {
   margin-bottom: 0 !important;
-  input{
+
+  input {
     display: none;
   }
-  label{
+
+  label {
     display: block;
     padding: 5px;
     text-transform: uppercase;
@@ -1139,20 +1194,278 @@ footer {
     text-align: center;
     cursor: pointer;
   }
-  input:checked+label{
+
+  input:checked + label {
     border-color: $mainColor;
   }
 }
-#products_grid .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1{
+
+#products_grid .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1 {
   height: 399px;
   max-width: 300px;
   margin: 0 auto;
 }
+
 .oe_product {
-  .card{
+  .card {
     border: 0;
   }
 }
-.cuts-card .cuts-card-content p{
+
+.cuts-card .cuts-card-content p {
   font-size: 18px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #30bfff;
+  background-color: #30bfff;
+}
+
+.delivery-info {
+  @extend %my-card
+}
+
+.delivery-info-card {
+  img {
+    max-width: 55px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.product-details {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  @extend %my-card;
+
+  .in-stock {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-color: $mainColor;
+    padding: 15px 15px 30px 15px;
+    @extend %my-shadow2;
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 120%;
+      height: 30px;
+      transform: rotate(-12deg);
+      bottom: -19px;
+      left: -10px;
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.slider-for {
+  .slick-prev, .slick-next{
+    width: 27px;
+    height: 27px;
+  }
+  .slick-prev:before, .slick-next:before{
+    font-size: 30px;
+  }
+  .slick-slide {
+    padding: 5px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: 412px;
+      margin: auto;
+      border-radius: 8px;
+    }
+  }
+}
+
+.slider-nav {
+  .slick-active.slick-current{
+    border-radius: 8px;
+    img{
+      border: 1px $mainColor solid;
+    }
+  }
+  .slick-prev {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .slick-next {
+    top: auto;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .slick-list {
+    padding: 0 !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  .slick-slide {
+    height: 107px;
+    padding: 3px;
+    cursor: pointer;
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #1d2124;
+}
+
+.product-details-info{
+  h3{
+    font-weight: bold;
+  }
+}
+.big-price{
+  span{
+    font-size: 40px;
+    color: $mainColor;
+  }
+}
+.mw-65px{
+  min-width: 65px;
+}
+input.number-cunt{
+  width: 50px !important;
+}
+.add-car-button{
+  .icon-cart{
+    position: relative;
+    top: 2px;
+  }
+  position: relative;
+  span.button-title{
+    padding-right: 10px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    display: block;
+    right: 40px;
+    top: 0;
+    background-color: white;
+  }
+}
+.my-table{
+  @extend %my-shadow;
+  margin-bottom: 20px;
+  table{
+    margin-bottom: 0;
+    tbody{
+      tr{
+        th{
+          font-size: 18px;
+          white-space: nowrap;
+        }
+        td{
+          font-size: 20px;
+          text-align: center;
+          white-space: nowrap;
+        }
+        &:last-child{
+          td{
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+.top-cart{
+  position: relative;
+  .cart-drop-container{
+    overflow: hidden;
+    color: $darkColor;
+    width: 330px;
+    position: absolute;
+    background-color: white;
+    border-radius: 4px;
+    left: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 5px));
+    z-index: 10000;
+    button.close-drop{
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 20px;
+      outline: none;
+      &:focus{
+        outline: none;
+      }
+    }
+    @extend %my-shadow
+  }
+
+}
+.small-inc-dec{
+  input{
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0;
+  }
+}
+ul.products-list{
+  li{
+    &:not(:last-child){
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+  .product-in-dropCart{
+    .media{
+      img{
+        width: 50px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      h5{
+        font-size: 16px;
+        max-width: 80px;
+      }
+      .big-price.small-price{
+        font-size: 18px;
+        span{
+          font-size: 25px;
+        }
+      }
+    }
+
+  }
+  .delete-product-in-list{
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ff2c44;
+    transform: scale(1);
+    transition: all ease-in-out 0.4s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+.border-radius-0{
+  border-radius: 0 !important;
 }
