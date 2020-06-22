@@ -1,6 +1,20 @@
 $(document).ready(function () {
     $('.delete-product-in-list').on('click', function () {
-        $(this).closest("li").fadeOut( "slow" );
+        $(this).closest("li").fadeOut( "normal", function () {
+            $(this).remove();
+            if($('.products-list li').length === 0){
+                $('.no-item').removeClass('d-none')
+            }else {
+                $('.no-item').addClass('d-none')
+            }
+        });
+
+    });
+
+    $('.delete-product-in-table').on('click', function () {
+        $(this).closest("tr").fadeOut( "normal", function () {
+            $(this).remove();
+        });
     });
 
     $('.cart-drop-link, .close-drop').on('click', function (e) {
